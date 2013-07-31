@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MediaScannerActivity" >
+    
+    <Button
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/scan_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan" />
+    
+    <EditText
+        android:id="@+id/path_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/scan_btn"
+        android:layout_toRightOf="@id/scan_btn"
+        android:singleLine="true"
+        android:ems="10" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scan_btn"
+        android:layout_centerHorizontal="true"
+        android:background="#99FF66"
+        android:text="scanning: "
+         />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/status"
+         >
+        <TextView
+        android:id="@+id/failed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF6600"
+         />
+    </ScrollView>
+    
+</RelativeLayout>
